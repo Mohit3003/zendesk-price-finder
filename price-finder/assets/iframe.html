@@ -1,0 +1,44 @@
+<html>
+<head>
+  <meta charset="utf-8">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ <script src="https://cdn.jsdelivr.net/jquery/3.2.1/jquery.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ 
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/core.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/sha256.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/hmac.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/enc-base64.min.js"></script>
+ 
+
+ <link href="main.css" rel="stylesheet">
+</head>
+<body class="wrapper container">
+
+  <div id="content"></div>
+
+  <script id="requester-template" type="text/x-handlebars-template">
+   <div class="row">
+    <div>
+      <span class="data-field col-sm-3 col-md-6 col-lg-4">TV Model : </span>
+      <span class="data-value col-sm-9 col-md-6 col-lg-8">{{tv_model}}</span>
+    </div>
+	<div>
+      <span class="data-field col-sm-3 col-md-6 col-lg-4">TV Price on Amazon : </span>
+      <span class="data-value col-sm-9 col-md-6 col-lg-8">{{tv_price}}</span>
+    </div>    
+	</div>
+    </table>
+  </script>
+
+  <script id="error-template" type="text/x-handlebars-template">
+    <p>{{status}} - {{statusText}} error. Please report a bug at the link below.</p>
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/handlebarsjs/4.0.8/handlebars.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://assets.zendesk.com/apps/sdk/2.0/zaf_sdk.js"></script>
+  <script type="text/javascript" src="main2.js"></script>
+</body>
+
+</html>
