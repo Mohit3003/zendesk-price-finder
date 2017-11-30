@@ -16,9 +16,9 @@ $(function() {
 function showInfo(tv_model,client) {
 	
 	var tv_price;	
-	var access_key_id = "AWSAccessKeyId=AKIAJPOPMTPE6XJQEZTQ";
-	//var secret_key = "1234567890";//"gH9VYlTSXUz8feyuOMCxJa5jQ4mD3/sS2BYTEurY";
-	var associate_Id= "&AssociateTag=legal12345-21";
+	var access_key_id = "AWSAccessKeyId=YOURAWSACCESSKEY";
+	var secret_key = "YOURSECRETKEY";;
+	var associate_Id= "&AssociateTag=YOURASSOCIATETAG";
 	var idType= "&IdType=ASIN";
 	var itemId= "&ItemId="+tv_model;
 	var operation = "&Operation=ItemLookup";
@@ -36,7 +36,7 @@ function showInfo(tv_model,client) {
 
 	console.log(sign_string);
 	
-	var signature2 = CryptoJS.HmacSHA256(sign_string, "gH9VYlTSXUz8feyuOMCxJa5jQ4mD3/sS2BYTEurY");
+	var signature2 = CryptoJS.HmacSHA256(sign_string, secret_key);
 	console.log("signature2 = " + signature2);
 	var abcd= signature2.toString(CryptoJS.enc.Base64);
 	console.log("abcd = " + abcd);
